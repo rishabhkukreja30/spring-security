@@ -9,6 +9,9 @@ public class Todo {
         this.description = description;
     }
 
+    public Todo() {
+    }
+
     public String getUsername() {
         return username;
     }

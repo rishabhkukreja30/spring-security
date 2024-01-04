@@ -21,12 +21,12 @@ public class TodoController {
     }
 
     @GetMapping("/users/{username}/todos")
-    public Todo retreiveTodoForSprcificUser(@PathVariable String username) {
+    public Todo retreiveTodoForSprcificUser(@PathVariable("username") String username) {
         return TO_DO_LIST.get(0);
     }
 
     @PostMapping("/users/{username}/todos")
-    public void createTodoForSprcificUser(@PathVariable String username, @RequestBody Todo todo) {
+    public void createTodoForSpecificUser(@PathVariable("username") String username, @RequestBody Todo todo) {
         logger.info("Create {} for {}", todo, username);
         TO_DO_LIST.add(todo);
     }
